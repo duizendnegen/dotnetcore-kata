@@ -8,7 +8,7 @@ namespace csharpcore
         private void TestItemChange(string name, int sellIn, int quality, int expectedSellIn, int expectedQuality)
         {
             IList<Item> Items = new List<Item> { new Item { Name = name, SellIn = sellIn, Quality = quality } };
-            GildedRose app = new GildedRose(Items);
+            GildedRose app = new GildedRose(Items, new updater.UpdateFactory());
             app.UpdateQuality();
             Assert.Equal(expectedSellIn, Items[0].SellIn);
             Assert.Equal(expectedQuality, Items[0].Quality);

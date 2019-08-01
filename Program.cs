@@ -39,7 +39,7 @@ namespace csharpcore
                 }
             };
 
-            var app = new GildedRose(Items);
+            var app = new GildedRose(Items, new updater.UpdateFactory());
 
 
             for (var i = 0; i < 31; i++)
