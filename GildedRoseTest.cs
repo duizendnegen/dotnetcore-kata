@@ -73,5 +73,17 @@ namespace csharpcore
         {
             TestItemChange(GildedRose.BACKSTAGE_PASS, 0, 20, -1, 0);
         }
+
+        [Fact]
+        public void ConjuredCake_DegradesTwiceAsFast()
+        {
+            TestItemChange(GildedRose.CONJURED_CAKE, 5, 10, 4, 8);
+        }
+
+        [Fact]
+        public void ConjuredCake_DegradesFourTimesAsFastAfterSellIn()
+        {
+            TestItemChange(GildedRose.CONJURED_CAKE, -4, 10, -5, 6);
+        }
     }
 }
